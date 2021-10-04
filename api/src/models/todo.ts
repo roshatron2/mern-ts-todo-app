@@ -10,7 +10,7 @@ interface User {
 const todoSchema: Schema = new Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
-  status: { type: Boolean,default : false },
+  status: { type: Boolean, default: false },
 });
 
 export default model<ITodo>("Todos", todoSchema);
