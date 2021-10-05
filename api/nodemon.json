@@ -1,0 +1,8 @@
+{
+  "env": {
+    "MONGOURI_DEV": "mongodb://localhost:27017/test",
+    "MONGOURI_PROD": "mongodb+srv://roshatron:roshatron@cluster0.nw9vx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "JWT_SECRET": "secret",
+    "JWT_EXPIR": "30d"
+  }
+}

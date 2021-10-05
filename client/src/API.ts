@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 import { ApiDataType, ITodo } from "./type";
-const baseURL: string = "http://localhost:5000";
+const baseURL: string = process.env.BACKEND_URL || "http://localhost:5000";
 
 export const getTodos = async (): Promise<AxiosResponse<ApiDataType> | undefined> => {
   try {
@@ -29,7 +29,7 @@ export const addTodo = async (formData: ITodo): Promise<AxiosResponse<ApiDataTyp
 export const updateTodo = async (todo: ITodo): Promise<AxiosResponse<ApiDataType> | undefined> => {
   try {
     console.log(todo);
-    
+
     const todoUpdate: Pick<ITodo, "status"> = {
       status: true,
     };

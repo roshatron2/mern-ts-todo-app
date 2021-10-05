@@ -15,11 +15,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const connectToDb = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const uri = process.env.MONGOURI || "mongodb://localhost:27017/test";
+        const uri = process.env.MONGOURI_DEV || "mongodb://localhost:27017/test";
         const PORT = process.env.PORT || 5000;
         const options = { useNewUrlParser: true, useUnifiedTopology: true };
         const connection = yield mongoose_1.default.connect(uri, options);
-        console.log(`Server running on Port ${PORT}`);
     }
     catch (err) {
         console.log(err);

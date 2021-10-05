@@ -1,12 +1,6 @@
 import { Schema, model, connect } from "mongoose";
 import { ITodo } from "../types/todos";
 
-interface User {
-  name: string;
-  email: string;
-  avatar?: string;
-}
-
 const todoSchema: Schema = new Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
