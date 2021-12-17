@@ -1,10 +1,10 @@
-import express,{Request,Response,NextFunction} from "express";
+import express, { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import User from "../models/user";
 import { IUser } from "../types/user";
 
 const protect = async (req: any, res: Response, next: NextFunction) => {
-  let token : string;
+  let token: string;
   if (req.headers.authorization && req.headers.authorization.startsWith("Bearer")) {
     token = req.headers.authorization.split(" ")[1];
   }

@@ -9,6 +9,13 @@ interface ITodo {
   updatedAt?: string;
 }
 
+interface IUser {
+  name: string;
+  username: string;
+  email: string;
+  password: string;
+}
+
 type TodoProps = {
   todo: ITodo;
 };
